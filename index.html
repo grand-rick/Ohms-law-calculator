@@ -8,71 +8,80 @@
     <!-- Link to CSS files -->
     <link rel="stylesheet" href="style.css">
     <!--Bootstrap 4-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="shortcut icon" href="img/ohm-35900_960_720.png" type="image/x-icon">
 </head>
 <body>
-    <header id="header" class="container-fluid">
-        <h1>Ohm's Law Calculators</h1>
+    <header id="header">
+        <h1>Ohm's Law Calculator</h1>
     </header>
 
     <main id="main-content">
         <div class="container">
-                <form action="" class="row pt-2 pb-2">
-                    <div class="current1 col-xs-12 col-md-6 col-lg-4">
-                        <label for="current1">Current: </label>
-                        <input type="number" name="current1" id="current1">
+                <div class="row">
+                    <!-- Voltage Calculator -->
+                    <div class="current1">
+                        <label for="current1">Current (A): </label>
+                        <input type="number" name="current1" id="current1" placeholder="current">
                     </div>
-                    <div class="resist1 col-xs-12 col-md-6 col-lg-4">
-                        <label for="resist1">Resistance: </label>
-                        <input type="number" name="resist1" id="resist1">
+                    <div class="resist1">
+                        <label for="resist1">Resistance (R): </label>
+                        <input type="number" name="resist1" id="resist1" placeholder="resistance">
                     </div>
-                    <div class="result col-xs-12 col-md-12 col-lg-4">
-                        <button class="mr-2">Calculate</button>
-                        Voltage =  <div id="volt"></div>
+                    <div class="result">
+                        <span>Voltage (V) = </span><div id="volt" class="ans"></div>
+                        <button class="mr-2" id="VOLTAGE"><span id="V">Calculate Voltage</span></button>
                     </div>
-                </form>
+                    <button class="clr clrV">CLEAR</button>
+                </div>
             
-                <form action="" class="row pt-2 pb-2">
-                    <div class="volt2 col-xs-12 col-md-6 col-lg-4">
-                        <label for="voltage2">Voltage: </label>
-                        <input type="number" name="voltage2" id="voltage2"> 
+                <div class="row pt-2 pb-2">
+                    <!-- Current Calculator -->
+                    <div class="volt2">
+                        <label for="voltage2">Voltage (V): </label>
+                        <input type="number" name="voltage2" id="voltage2" placeholder="voltage"> 
                     </div>
-                    <div class="resist2 col-xs-12 col-md-6 col-lg-4">
-                        <label for="resist2">Resistance: </label>
-                        <input type="number" name="resist2" id="resist2">
+                    <div class="resist2">
+                        <label for="resist2">Resistance (R): </label>
+                        <input type="number" name="resist2" id="resist2" placeholder="resistance">
                     </div>
-                    <div class="result col-xs-12 col-md-12 col-lg-4">
-                        <button class="mr-2">Calculate</button>
-                        Current =  <div id="current"></div>
+                    <div class="result">
+                        <span>Current (A) =  </span><div id="curr" class="ans"></div>
+                        <button class="mr-2" id="CURRENT"><span id="I">Calculate Current</span></button>
                     </div>
-                </form>
+                    <button class="clr clrI">CLEAR</button>
+                </div>
 
-                <form action="" class="row pt-2 pb-2">
-                    <div class="volt3 col-xs-12 col-md-6 col-lg-4">
-                        <label for="">Voltage: </label>
-                        <input type="number" name="" id="volt3">
+                <div class="row pt-2 pb-2">
+                    <!-- Resistance Calculator -->
+                    <div class="volt3">
+                        <label for="">Voltage (V): </label>
+                        <input type="number" name="" id="volt3" placeholder="voltage">
                     </div>
-                    <div class="current3 col-xs-12 col-md-6 col-lg-4">
-                        <label for="current3">Current</label>
-                        <input type="number" name="current3" id="current3">
+                    <div class="current3">
+                        <label for="current3">--..Current (A): </label>
+                        <input type="number" name="current3" id="current3" placeholder="current">
                     </div>
-                    <div class="result col-xs-12 col-md-12 col-lg-4">
-                        <button class="mr-2">Calculate</button>
-                        Resistance = <div id="resist"></div>
+                    <div class="result">
+                        <span>Resistance(R)= </span><div id="resist" class="ans"></div>
+                        <button class="mr-2" id="RESISTANCE"><span id="R">Calculate Resistance</span></button>
                     </div>
-                </form>
+                    <button class="clr clrR">CLEAR</button>
+                </div>
         </div>
     </main>
     
     <footer id="footer" class="container-fluid">
-        FOOTER
+        WEB AUTHOR: PATRICK KABUGA MURIMI<br>
+        &copy;grandrick - All rights reserved<br>
+        Later! &nbsp;Adios! &nbsp;Au revoir! &nbsp;Chao! &nbsp;Sayonara! &nbsp;Malya! &nbsp;Aloha! &nbsp;auf Wiedersehen!
     </footer>
     <!-- Custom JavaScript code -->
     <script src="script.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 </body>
 </html>
